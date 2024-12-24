@@ -1,3 +1,5 @@
+# Name: Varun A
+# Reg No: 24900420
 # Monitoring-soil-moisture-value-in-Thing-speak-cloud
 # Uploading soil moisture sensor data in Thing Speak cloud
 
@@ -84,8 +86,29 @@ Prototype and build IoT systems without setting up servers or developing web sof
 ![image](https://github.com/user-attachments/assets/5beaf86c-0d5d-4b99-9c22-bb0351f487ab)
 
 # PROGRAM:
+
+~~~
+const int Soil_pin = 25;  // Soil MOisture */ ADC CH2
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int Soil_adc_val;
+  Soil_adc_val = analogRead(Soil_pin);  /* Read Temperature */
+  Serial.print("Soil Moisture Range = ");
+  Serial.println(Soil_adc_val);
+  delay(1000);
+}
+~~~
 # CIRCUIT DIAGRAM:
+
+![b15372c8-d238-484c-88a7-e0a77786768c](https://github.com/user-attachments/assets/658c9bd5-179c-4ee8-b0a7-c1a6ed8c7224)
+
 # OUTPUT:
+
+![ef187613-4713-44c5-95b1-b11cf827641b](https://github.com/user-attachments/assets/241b5dfb-ae01-459c-bbcb-571b6fce61ba)
+
 # RESULT:
 Thus the soil moisture values are updated in the Thing speak cloud using ESP32 controller.
 
